@@ -31,5 +31,7 @@ type Definition struct {
 	// Required specifies which properties are required, if the schema type is Object.
 	Required []string `json:"required,omitempty"`
 	// Items specifies which data type an array contains, if the schema type is Array.
-	Items *Definition `json:"items,omitempty"`
+	Items    *Definition `json:"items,omitempty"`
+	MinItems int         `json:"minItems,omitempty"`
+	MaxItems int         `json:"maxItems,omitempty"`
 }
